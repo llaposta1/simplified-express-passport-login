@@ -1,0 +1,43 @@
+
+
+<div class="d-flex flex-row-reverse bd-highlight">
+<div class="p-2 bd-highlight"><h1>Hi <%= name %>
+</h1></div>
+<div class="p-2 bd-highlight">
+    <form action="/logout?_method=DELETE" method="POST">
+        <button type="submit">LOG OUT</button>
+    </form>
+</div>
+
+
+
+</div>
+
+<div class="buttons" >
+    <button id="click">click</button>
+    <button id="reset">reset</button>
+</div>
+<div class="result">
+    <p id="result"></p>
+</div>
+
+
+<script>const bootstrap = require('bootstrap')</script>
+<script>
+    
+    var click = document.querySelector("#click");
+        var reset = document.querySelector("#reset");
+        var result = document.querySelector("#result");
+        var counter = 0;
+
+        click.addEventListener('click', function () {
+            counter++;
+            result.innerHTML = `You clicked the button ${counter} times`;
+        });
+
+        reset.addEventListener('click', function () {
+            counter = 0;
+            result.innerHTML = "You set the counter to 0";
+        });
+
+</script>
